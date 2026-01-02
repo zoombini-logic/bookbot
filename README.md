@@ -1,2 +1,3 @@
 # bookbot
-bookbot course for boot.dev - should not be used for anything.
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
