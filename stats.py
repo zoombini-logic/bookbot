@@ -24,9 +24,5 @@ def char_sort(inc_dict):
         single_dict["num"] = inc_dict[char_key]
         dict_list.append(single_dict)
     dict_list.sort(reverse=True, key=sort_on)
-#    print("sortedlist")
-#    print (dict_list)
     return (dict_list)
 
-
-#char_sort({'a': 5, 'b': 2, 'o': 8})

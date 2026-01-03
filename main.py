@@ -1,4 +1,5 @@
 from stats import word_count, count_chars, char_sort
+import sys
 
 def get_book_text(location):
     with open(location) as f:
@@ -7,9 +8,13 @@ def get_book_text(location):
 
 
 def main():
-    book_text = get_book_text("./books/frankenstein.txt")
+    if (len(sys.argv) != 2):
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    book_loc =sys.argv[1]
+    book_text = get_book_text(book_loc)
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {book_loc}...")
     print("----------- Word Count ----------")
     total_words = word_count(book_text)
     print(f"Found {total_words} total words")
