@@ -10,4 +10,23 @@ def count_chars(fulltext):
             char_dict[lowerc] += 1
         else: 
             char_dict[lowerc] = 1
-    print(char_dict)
+    return char_dict
+
+def sort_on(items):
+    return items["num"]
+
+def char_sort(inc_dict):
+    dict_list = []
+    single_dict = {}
+    for char_key in inc_dict: 
+        single_dict = {}
+        single_dict["char"] = char_key
+        single_dict["num"] = inc_dict[char_key]
+        dict_list.append(single_dict)
+    dict_list.sort(reverse=True, key=sort_on)
+#    print("sortedlist")
+#    print (dict_list)
+    return (dict_list)
+
+
+#char_sort({'a': 5, 'b': 2, 'o': 8})
